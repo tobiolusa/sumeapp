@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from .models import Profile
 import pdfkit
 from django.http import HttpResponse 
@@ -20,6 +21,7 @@ def accept(request):
         
         profile = Profile(name=name, email=email, phone_number=phone_number, summary=summary, degree=degree, school=school, university=university, previous_work=previous_work,skills=skills)
         profile.save()
+        return redirect(reverse('resume', args=[profile.id]))
     return render(request, 'sumeapp/accept.html')
 
 

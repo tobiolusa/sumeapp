@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macsume | CV Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .heading-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="heading-section">
+            <h1>Welcome to CV Generator</h1>
+            <p>Please fill out the form below to apply.</p>
+            <a href="#formSection" class="btn btn-primary">Get Started</a>
+        </div>
+
+        <div id="formSection">
+            <h2>Application Form</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone_number">Phone Number</label>
+                    <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="summary">Summary</label>
+                    <textarea class="form-control" id="summary" name="summary" rows="4" maxlength="2000" placeholder="Enter a summary about yourself" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="degree">Degree</label>
+                    <input type="text" class="form-control" id="degree" name="degree" placeholder="Enter your degree" required>
+                </div>
+                <div class="form-group">
+                    <label for="school">School</label>
+                    <input type="text" class="form-control" id="school" name="school" placeholder="Enter your school name" required>
+                </div>
+                <div class="form-group">
+                    <label for="university">University</label>
+                    <input type="text" class="form-control" id="university" name="university" placeholder="Enter your university name" required>
+                </div>
+                <div class="form-group">
+                    <label for="previous_work">Previous Work</label>
+                    <textarea class="form-control" id="previous_work" name="previous_work" rows="4" maxlength="2000" placeholder="Describe your previous work experience" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <textarea class="form-control" id="skills" name="skills" rows="3" placeholder="List your skills" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Build CV</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

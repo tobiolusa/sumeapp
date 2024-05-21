@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e4e4e4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{user_profile.name}}</h2>
+        <h2>{{user_profile.email}}</h2>
+        <h2>{{user_profile.phone_number}}</h2>
+        <hr>
+        <p class="section-title">Summary</p>
+        <p>{{user_profile.summary}}</p>
+        <p class="section-title">Skills</p>
+        <p>{{user_profile.skills}}</p>
+        <p class="section-title">Previous Work</p>
+        <p>{{user_profile.previous_work}}</p>
+        <p class="section-title">Education</p>
+        <ul>
+            <li>{{user_profile.school}}</li>
+            <li>{{user_profile.university}}</li>
+            <li>{{user_profile.degree}}</li>
+        </ul>
+    </div>
+</body>
+</html>

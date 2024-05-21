@@ -6,6 +6,7 @@ class Profile(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=254)
     phone_number = models.CharField(max_length=200)
+    job_role = models.CharField(max_length=500, default="Developer")
     summary = models.TextField(max_length=2000)
     degree = models.CharField(max_length=200)
     school = models.CharField(max_length=200)

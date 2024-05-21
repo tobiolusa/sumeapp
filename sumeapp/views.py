@@ -10,6 +10,7 @@ def accept(request):
         name = request.POST.get('name', "")
         email = request.POST.get('email', "")
         phone_number = request.POST.get('phone_number', "")
+        job_role = request.POST.get('job_role', "")
         summary = request.POST.get('summary', "")
         degree = request.POST.get('degree', "")
         school = request.POST.get('school', "")
@@ -20,6 +21,7 @@ def accept(request):
         profile = Profile(name=name, email=email, phone_number=phone_number, summary=summary, degree=degree, school=school, university=university, previous_work=previous_work,skills=skills)
         profile.save()
     return render(request, 'sumeapp/accept.html')
+
 
 def resume(request, id):
     user_profile = Profile.objects.get(pk=id)

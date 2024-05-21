@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Generator</title>
+    <title>Resume App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,14 +57,17 @@
         <hr>
         <p class="section-title">Summary</p>
         <p>{{user_profile.summary}}</p>
+        <hr>
         <p class="section-title">Skills</p>
         <p>{{user_profile.skills}}</p>
+        <hr>
         <p class="section-title">Previous Work</p>
         <p>{{user_profile.previous_work}}</p>
+        <hr>
         <p class="section-title">Education</p>
         <ul>
             <li>{{user_profile.school}}</li>
-            <li>{{user_profile.university}}</li>
+            <li>{{user_profile.school}} from {{user_profile.university}}</li>
             <li>{{user_profile.degree}}</li>
         </ul>
     </div>

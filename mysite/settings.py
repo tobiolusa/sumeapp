@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     'sumeapp-production.up.railway.app',
     'web-production-27f9.up.railway.app',
     '127.0.0.1',
+    'sumeapp.onrender.com',
     ]
 
 

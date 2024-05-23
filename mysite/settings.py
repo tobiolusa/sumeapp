@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'sumeapp-production.up.railway.app',
-    '/',
+    'web-production-27f9.up.railway.app',
     ]
 
 

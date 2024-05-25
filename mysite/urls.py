@@ -20,6 +20,7 @@ from sumeapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('index/', views.index , name="index"),
     path('', views.accept , name="accept"),
-    path('youresume/<int:id>/', views.resume , name="resume"),
+    path('download/<int:id>/', views.resume , name="resume"),
     ]

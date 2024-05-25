@@ -6,6 +6,10 @@ from django.http import HttpResponse
 from django.template import loader
 import io
 
+def index(request): 
+    return render(request, 'sumeapp/index.html')
+    
+    
 def accept(request):
     if request.method == "POST": 
         name = request.POST.get('name', "")

@@ -10,7 +10,7 @@ def index(request):
     return render(request, 'sumeapp/index.html')
     
     
-def accept(request):
+def register(request):
     if request.method == "POST": 
         name = request.POST.get('name', "")
         email = request.POST.get('email', "")
@@ -26,7 +26,7 @@ def accept(request):
         profile = Profile(name=name, email=email, phone_number=phone_number, summary=summary, degree=degree, school=school, university=university, previous_work=previous_work,skills=skills)
         profile.save()
         return redirect(reverse('resume', args=[profile.id]))
-    return render(request, 'sumeapp/accept.html')
+    return render(request, 'sumeapp/register.html')
 
 
 def resume(request, id):
